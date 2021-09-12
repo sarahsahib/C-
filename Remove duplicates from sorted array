@@ -1,0 +1,54 @@
+using System;
+using static System.Console;
+namespace letcode1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        
+           int [] nums= new int[5];
+            int[] y = new int[5];
+            int count = 0;
+            for (int i2=0;i2<5;i2++)
+            {
+                Write("Enter number please: ");
+                nums[i2] = Convert.ToInt32(ReadLine());
+
+
+            }
+
+
+
+
+            int flage= 0;
+            for (int j = 0; j < nums.Length; j++)
+            {
+
+                for (int g = 0; g <y.Length;g++)
+                {
+
+                    if(nums[j]==y[g])
+                    {
+                      
+                        flage = -1;
+                    }
+                }
+                if (flage != -1)
+                {
+                  
+                    y[count] = nums[j];
+                    count++;
+                    //flage = 0;
+                }
+                flage = 0;
+            }
+            for (int i2 = 0; i2 < 5; i2++)
+            {
+                WriteLine(y[i2]);
+
+
+            }
+        }
+    }
+}
