@@ -1,0 +1,64 @@
+using System;
+
+namespace HomeSales
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char sp = 'D';
+            int sumD=0, sumE=0, sumF=0, sum = 0; ;
+            while (true)
+            {
+
+
+                Console.WriteLine("Enter a salesperson inial, Enter z to quit");
+                sp = Convert.ToChar(Console.ReadLine());
+                if (sp == 'z' || sp == 'Z')
+                {
+                    break;
+                }
+
+                Console.WriteLine("Enter amount of sales");
+                int value = Convert.ToInt32(Console.ReadLine());
+                sum = sum + value;
+                if(sp=='D'||sp=='d')
+                {
+                    sumD = sumD + value;
+
+                }
+
+                if (sp == 'E' || sp == 'e')
+                {
+                    sumE = sumE + value;
+
+                }
+
+                if (sp == 'F' || sp == 'f')
+                {
+                    sumF = sumF + value;
+
+                }
+    
+
+            }
+            Console.WriteLine("sum is {0}", sum);
+            Console.WriteLine("sumD is {0}", sumD);
+            Console.WriteLine("sumE is {0}", sumD);
+            Console.WriteLine("sumF is {0}", sumF);
+            if (sumD > sumE && sumD > sumF)
+            {
+                Console.WriteLine("Danielle  sold the most");
+            }
+            if (sumE > sumD && sumE > sumF)
+            {
+                Console.WriteLine("Edward  sold the most");
+            }
+            if (sumF > sumD && sumF > sumE)
+            {
+                Console.WriteLine("Francis  sold the most");
+            }
+            Console.ReadLine();
+        }
+    }
+}

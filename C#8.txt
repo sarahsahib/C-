@@ -1,0 +1,78 @@
+using System;
+
+namespace ShirtDemo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ShirtDemo[] SArray = new ShirtDemo[3];
+            SArray[0] = new ShirtDemo("Cotten", "White", 36);
+            SArray[1] = new ShirtDemo("Silk", "Blue", 30);
+            SArray[2] = new ShirtDemo("Poly", "Red",32);
+            Display(SArray);
+
+        }
+            static void Display(  ShirtDemo[] s)
+            {
+            for (int i = 0; i < s.Length; i++)
+            {
+                Console.WriteLine("Material is {0}, Color is {1}, Size is {2}", s[i].Material, s[i].Color, s[i].Size);
+            }
+            }
+        
+        class ShirtDemo
+        {
+            private string material;
+            private string color;
+            private int size;
+       
+
+            public ShirtDemo(string v1, string v2,int v3)
+            {
+                this.material = v1;
+                this.color = v2;
+                this.size = v3;
+            }
+
+            public string Material
+            {
+
+                get
+                {
+                    return material;
+                }
+                set
+                {
+                    material = value;
+                }
+            }
+
+            public string Color
+            {
+
+                get
+                {
+                    return color;
+                }
+                set
+                {
+                   color = value;
+                }
+            }
+
+            public int Size
+            {
+
+                get
+                {
+                    return size;
+                }
+                set
+                {
+                  size = value;
+                }
+            }
+        }
+    }
+}

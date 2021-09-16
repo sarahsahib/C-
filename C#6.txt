@@ -1,0 +1,27 @@
+using System;
+
+namespace CovertMilesToKillometers
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int miles = 0;
+            double r;
+            Console.WriteLine("Enter a number of miles");
+         
+
+            miles = Convert.ToInt32(Console.ReadLine());
+           r =MilesToKillometers(miles);
+            Console.WriteLine("result is = {0}", r);
+        }
+
+        public static double MilesToKillometers(int m)
+        {
+            double mtoK;
+            mtoK = m * 1.60934;
+            return mtoK;
+
+        }
+    }
+}

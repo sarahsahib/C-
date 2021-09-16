@@ -1,0 +1,30 @@
+using System;
+
+namespace CheckZip
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] zip = {60050, 60051, 60052, 60053, 60054, 60055, 60056, 60057, 60058, 60059 };
+            int flage=0;
+            Console.WriteLine("Enter a zip code");
+            int userinput = Convert.ToInt32(Console.ReadLine());
+
+            for (int i=0; i<10;i++)
+            {
+                if (userinput == zip[i])
+                    flage = -1;
+              
+            }
+            if (flage == -1)
+            {
+                Console.WriteLine("This zip code is in the company's delivery area");
+            }
+            else
+            {
+                Console.WriteLine("This zip code is not in the company's delivery area");
+            }
+        }
+    }
+}

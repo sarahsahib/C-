@@ -1,0 +1,18 @@
+using System;
+using static System.Console;
+
+namespace HoursAndMinutes
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+          WriteLine("Enter number of minutes please");
+            int m = Convert.ToInt32(ReadLine());
+            int h = m / 60;
+            int hm = m % 60;
+            WriteLine("hourse is {0} and minutes is {1}", h, hm);
+
+        }
+    }
+}
